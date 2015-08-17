@@ -16,6 +16,7 @@ return [
     */
 
     'driver' => env('MAIL_DRIVER', 'smtp'),
+    'mandrill' => array('secret' => 'your-mandrill-key', ),
 
     /*
     |--------------------------------------------------------------------------
@@ -28,7 +29,7 @@ return [
     |
     */
 
-    'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
+    'host' => env('MAIL_HOST', 'smtp.mandrillapp.com'),
 
     /*
     |--------------------------------------------------------------------------
@@ -54,7 +55,7 @@ return [
     |
     */
 
-    'from' => ['address' => null, 'name' => null],
+    'from' => ['address' => "admin@admin.com", 'name' => "Admin"],
 
     /*
     |--------------------------------------------------------------------------
@@ -80,7 +81,7 @@ return [
     |
     */
 
-    'username' => env('MAIL_USERNAME'),
+    'username' => env('MAIL_USERNAME', 'goppii.nath@gmail.com'),
 
     /*
     |--------------------------------------------------------------------------
@@ -93,7 +94,7 @@ return [
     |
     */
 
-    'password' => env('MAIL_PASSWORD'),
+    'password' => env('MAIL_PASSWORD', 'jAe6M-XH1KsrxO8SdA0-Kw'),
 
     /*
     |--------------------------------------------------------------------------

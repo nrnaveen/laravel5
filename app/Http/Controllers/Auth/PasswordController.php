@@ -4,7 +4,8 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ResetsPasswords;
-
+use App\PasswordReset;
+use Input;
 
 use Illuminate\Http\Request;
 use Illuminate\Mail\Message;
@@ -76,8 +77,12 @@ class PasswordController extends Controller {
            */
 
            public function getReset($token = null) {
-                     if (is_null($token)) {
+                     if(is_null($token)) {
                                 throw new NotFoundHttpException;
+                     }
+                     $data = PasswordReset::where("token", '=', $token)->first();
+                     if(!$data) {
+                                return redirect("password/email")->withError("This password reset token is invalid.");
                      }
                      return view('auth.reset')->with('token', $token);
            }
@@ -90,6 +95,15 @@ class PasswordController extends Controller {
            */
 
            public function postReset(Request $request) {
+                     $token = Input::get('token');
+                     if(is_null($token)) {
+                                throw new NotFoundHttpException;
+                     }
+                     $row = PasswordReset::where("token", '=', $token)->first();
+                     if(!$row) {
+                                return redirect("password/email")->withError("This password reset token is invalid.");
+                     }
+                     $request->offsetSet("email", $row->email);
                      $this->validate($request, [
                                 'token' => 'required',
                                 'email' => 'required|email',

@@ -17,7 +17,6 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
            *
            * @var string
            */
-
            protected $table = 'users';
 
            /**
@@ -25,7 +24,6 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
            *
            * @var array
            */
-
            protected $fillable = ['first_name', 'last_name', 'email', 'password'];
 
            /**
@@ -33,7 +31,6 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
            *
            * @var array
            */
-
            protected $hidden = ['password', 'remember_token'];
 
            // Change Password
