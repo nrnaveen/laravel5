@@ -25,6 +25,8 @@
                      </div>
                      @include('partials.footer')
                      <!-- Scripts -->
+                     {!! HTML::script("admin_files/js/bootstrap.min.js") !!}
+                     {!! HTML::script("admin_files/js/jquery-ui.min.js") !!}
                      @yield('scripts')
            </body>
 </html>

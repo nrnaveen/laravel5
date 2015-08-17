@@ -9,6 +9,9 @@ use App\Http\Controllers\Controller;
 
 class HomeController extends Controller {
            public function getIndex() {
-                     return view('welcome');
+                     return view('front.index');
+           }
+           public function getHome() {
+                     return view('front.index');
            }
 }   
