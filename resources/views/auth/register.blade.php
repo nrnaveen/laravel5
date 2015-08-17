@@ -1,15 +1,16 @@
 @extends('layouts/app')
 {{-- Web site Title --}}
-@section('title') {{{ trans('site/user.register') }}} :: @parent @stop
+@section('title') Register @stop
 {{-- Content --}}
 @section('content')
            <div class="row">
                      <div class="page-header">
-                                <h2>{{{ trans('site/user.register') }}}</h2>
+                                <h2>Register</h2>
                      </div>
            </div>
            <div class="container-fluid">
                      <div class="row">
+                                @include('errors.messages')
                                 <div class="col-md-8 col-md-offset-2">
                                           @include('errors.list')
                                           <div class="panel panel-default">
@@ -18,7 +19,7 @@
                                                                <form class="form-horizontal" role="form" method="POST" action="{{ URL::to('/auth/register') }}">
                                                                          <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                                                          <div class="form-group">
-                                                                                    <label class="col-md-4 control-label">{{{ trans('site/user.e_mail') }}}</label>
+                                                                                    <label class="col-md-4 control-label">Email</label>
                                                                                     <div class="col-md-6">
                                                                                               <input type="email" class="form-control" name="email" value="{{ old('email') }}">
                                                                                     </div>
@@ -38,6 +39,7 @@
                                                                          <div class="form-group">
                                                                                     <div class="col-md-6 col-md-offset-4">
                                                                                               <button type="submit" class="btn btn-primary">Register</button>
+                                                                                              <a href="{{ URL::to('auth/login') }}" class="btn btn-info">Login</a>
                                                                                     </div>
                                                                          </div>
                                                                </form>

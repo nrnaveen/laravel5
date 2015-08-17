@@ -148,7 +148,6 @@ return [
         * 3rd Party Service Providers...
         */
         Laracasts\Generators\GeneratorsServiceProvider::class,
-        Laracasts\Flash\FlashServiceProvider::class,
         Illuminate\Html\HtmlServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
     ],
@@ -202,7 +201,6 @@ return [
         /*
         * 3rd Party Aliases...
         */
-        'Flash'     =>  laracasts\Flash\Flash::class,
         'Form'      => Illuminate\Html\FormFacade::class,
         'HTML'      => Illuminate\Html\HtmlFacade::class,
         'Image' => Intervention\Image\Facades\Image::class,
