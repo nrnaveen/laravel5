@@ -14,7 +14,6 @@ use Illuminate\Support\Facades\Password;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 class PasswordController extends Controller {
-
            /*
            |--------------------------------------------------------------------------
            | Password Reset Controller
