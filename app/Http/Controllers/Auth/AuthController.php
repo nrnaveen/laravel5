@@ -98,6 +98,7 @@ class AuthController extends Controller {
                 return $this->sendLockoutResponse($request);
            }
            $credentials = $this->getCredentials($request);
+           $credentials['role'] = 'user';
            if (Auth::attempt($credentials, $request->has('remember'))) {
                 // return $this->handleUserWasAuthenticated($request, $throttles);
                 return redirect($this->loginPath());

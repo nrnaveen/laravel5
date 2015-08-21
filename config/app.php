@@ -204,6 +204,7 @@ return [
         'Form'      => Illuminate\Html\FormFacade::class,
         'HTML'      => Illuminate\Html\HtmlFacade::class,
         'Image' => Intervention\Image\Facades\Image::class,
+        'User' => App\User::class,
     ],
     
 ];

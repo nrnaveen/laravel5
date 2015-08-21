@@ -50,4 +50,15 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
                      }
                      return $result;
            }
+
+           // check if login
+          public static function Login($role) {
+            if(Auth::guest()){
+              return false;
+            }elseif (Auth::user()->role != $role) {
+              return false;
+            }else{
+              return true;
+            }
+          }
 }
