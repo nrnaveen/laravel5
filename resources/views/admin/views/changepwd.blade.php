@@ -32,9 +32,9 @@
 @section('script')
 	{!! HTML::script("admin_files/js/bootstrap.min.js") !!}
 	{!! HTML::script("admin_files/js/jquery-ui.min.js") !!}
-        	{!! HTML::script("admin_files/js/plugins/daterangepicker/daterangepicker.js") !!}
-        	{!! HTML::script("admin_files/js/plugins/datepicker/bootstrap-datepicker.js") !!}
-        	{!! HTML::script("admin_files/js/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js") !!}
-        	{!! HTML::script("admin_files/js/plugins/iCheck/icheck.min.js") !!}
-        	{!! HTML::script("admin_files/js/AdminLTE/app.js") !!}
+	{!! HTML::script("admin_files/js/plugins/daterangepicker/daterangepicker.js") !!}
+	{!! HTML::script("admin_files/js/plugins/datepicker/bootstrap-datepicker.js") !!}
+	{!! HTML::script("admin_files/js/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js") !!}
+	{!! HTML::script("admin_files/js/plugins/iCheck/icheck.min.js") !!}
+	{!! HTML::script("admin_files/js/AdminLTE/app.js") !!}
 @stop

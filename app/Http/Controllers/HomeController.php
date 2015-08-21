@@ -8,10 +8,12 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 class HomeController extends Controller {
-           public function getIndex() {
-                     return view('front.index');
-           }
-           public function getHome() {
-                     return view('front.index');
-           }
+	
+	public function getIndex() {
+		return view('front.index');
+	}
+
+	public function getHome() {
+		return view('front.index');
+	}
 }   
